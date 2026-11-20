@@ -1,0 +1,833 @@
+{
+    "timestamp": "2026-11-20T05:43:53+01:00",
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "success_rate_pct": 100,
+    "results": [
+        {
+            "name": "API Health & Database Connectivity",
+            "method": "GET",
+            "path": "/api/v1/health",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "status": "healthy",
+                    "database": "connected",
+                    "service": "QuickEdit Production REST API",
+                    "version": "1.0.0",
+                    "timestamp": "2026-11-20T05:43:52+01:00"
+                }
+            }
+        },
+        {
+            "name": "Client Home Dashboard (M01)",
+            "method": "GET",
+            "path": "/api/v1/home/client",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "services": [
+                        {
+                            "id": 1,
+                            "slug": "quick_edit",
+                            "name": "Quick Edit",
+                            "subtitle": "24 hrs \u00e2\u20ac\u00a2 Up to 60s",
+                            "default_base_price": "999.00"
+                        },
+                        {
+                            "id": 2,
+                            "slug": "insta_reel",
+                            "name": "Insta Reel",
+                            "subtitle": "24-48 hrs \u00e2\u20ac\u00a2 High Retention",
+                            "default_base_price": "1499.00"
+                        },
+                        {
+                            "id": 3,
+                            "slug": "youtube_short",
+                            "name": "YouTube Short",
+                            "subtitle": "24-48 hrs \u00e2\u20ac\u00a2 Vertical 9:16",
+                            "default_base_price": "1299.00"
+                        },
+                        {
+                            "id": 4,
+                            "slug": "youtube_long",
+                            "name": "YouTube Long",
+                            "subtitle": "2-4 days \u00e2\u20ac\u00a2 8-15 mins",
+                            "default_base_price": "2999.00"
+                        }
+                    ],
+                    "top_verified_editors": [
+                        {
+                            "id": 3,
+                            "name": "Rohan Mehta",
+                            "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
+                            "headline": "Cinematic Reels & High-Retention Shorts Specialist",
+                            "starting_price": "1499.00",
+                            "rating_avg": "4.90",
+                            "rating_count": 128,
+                            "completed_projects_count": 142,
+                            "portfolios": [
+                                {
+                                    "id": 1,
+                                    "title": "Urban Streetwear Reel",
+                                    "category": "reels",
+                                    "video_media_id": 4
+                                }
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "name": "Priya Sharma",
+                            "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400",
+                            "headline": "Aesthetic Lifestyle, Travel Vlogs & Brand Commercials",
+                            "starting_price": "1200.00",
+                            "rating_avg": "4.80",
+                            "rating_count": 94,
+                            "completed_projects_count": 98,
+                            "portfolios": []
+                        },
+                        {
+                            "id": 5,
+                            "name": "Arjun Verma",
+                            "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+                            "headline": "Podcast Soundscapes & Longform Documentaries",
+                            "starting_price": "2499.00",
+                            "rating_avg": "4.95",
+                            "rating_count": 160,
+                            "completed_projects_count": 180,
+                            "portfolios": []
+                        }
+                    ],
+                    "banners": [
+                        {
+                            "id": 1,
+                            "title": "Turn Your Ideas Into Amazing Videos",
+                            "cta_text": "Browse Verified Editors"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Browse & Search Editors (M02)",
+            "method": "GET",
+            "path": "/api/v1/editors",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "editors": [
+                        {
+                            "id": 5,
+                            "name": "Arjun Verma",
+                            "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+                            "headline": "Podcast Soundscapes & Longform Documentaries",
+                            "starting_price": "2499.00",
+                            "rating_avg": "4.95",
+                            "rating_count": 160,
+                            "completed_projects_count": 180,
+                            "verification_status": "approved",
+                            "specializations": [
+                                "Audio Mastering",
+                                "Documentaries",
+                                "Podcasts"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Rohan Mehta",
+                            "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
+                            "headline": "Cinematic Reels & High-Retention Shorts Specialist",
+                            "starting_price": "1499.00",
+                            "rating_avg": "4.90",
+                            "rating_count": 128,
+                            "completed_projects_count": 142,
+                            "verification_status": "approved",
+                            "specializations": [
+                                "Color Grading",
+                                "Reels",
+                                "Shorts",
+                                "Sound Design"
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "name": "Priya Sharma",
+                            "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400",
+                            "headline": "Aesthetic Lifestyle, Travel Vlogs & Brand Commercials",
+                            "starting_price": "1200.00",
+                            "rating_avg": "4.80",
+                            "rating_count": 94,
+                            "completed_projects_count": 98,
+                            "verification_status": "approved",
+                            "specializations": [
+                                "Lifestyle",
+                                "Motion Graphics",
+                                "Travel Vlogs"
+                            ]
+                        }
+                    ],
+                    "count": 3
+                }
+            }
+        },
+        {
+            "name": "Editor Profile & Specializations (M03)",
+            "method": "GET",
+            "path": "/api/v1/editors/detail?id=3",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "id": 3,
+                    "name": "Rohan Mehta",
+                    "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
+                    "headline": "Cinematic Reels & High-Retention Shorts Specialist",
+                    "bio": "Professional video editor with 4+ years of experience editing for top Indian tech creators and lifestyle brands.",
+                    "starting_price": "1499.00",
+                    "years_experience": 4,
+                    "avg_delivery_days": 2,
+                    "completed_projects_count": 142,
+                    "rating_avg": "4.90",
+                    "rating_count": 128,
+                    "verification_status": "approved",
+                    "payout_upi_id": "rohan.upi@okhdfcbank",
+                    "specializations": [
+                        "Color Grading",
+                        "Reels",
+                        "Shorts",
+                        "Sound Design"
+                    ],
+                    "portfolios": [
+                        {
+                            "id": 1,
+                            "title": "Urban Streetwear Reel",
+                            "category": "reels",
+                            "view_count": 18400,
+                            "duration_sec": 32
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Services & Add-Ons Catalog",
+            "method": "GET",
+            "path": "/api/v1/services",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "services": [
+                        {
+                            "id": 1,
+                            "slug": "quick_edit",
+                            "name": "Quick Edit",
+                            "subtitle": "24 hrs \u00e2\u20ac\u00a2 Up to 60s",
+                            "description": "Fast pacing cuts, basic color balance, clean transitions, and audio cleanup.",
+                            "icon_key": "flash_on",
+                            "default_base_price": "999.00",
+                            "default_turnaround_hours": 24,
+                            "free_revisions_limit": 2,
+                            "extra_revision_price": "299.00",
+                            "is_active": 1,
+                            "sort_order": 0,
+                            "created_at": "2026-11-20 10:11:49",
+                            "updated_at": "2026-11-20 10:11:49"
+                        },
+                        {
+                            "id": 2,
+                            "slug": "insta_reel",
+                            "name": "Insta Reel",
+                            "subtitle": "24-48 hrs \u00e2\u20ac\u00a2 High Retention",
+                            "description": "Dynamic hooks, animated captions, sound effects, zoom-ins, and trending audio syncing.",
+                            "icon_key": "camera_alt",
+                            "default_base_price": "1499.00",
+                            "default_turnaround_hours": 36,
+                            "free_revisions_limit": 2,
+                            "extra_revision_price": "299.00",
+                            "is_active": 1,
+                            "sort_order": 0,
+                            "created_at": "2026-11-20 10:11:49",
+                            "updated_at": "2026-11-20 10:11:49"
+                        },
+                        {
+                            "id": 3,
+                            "slug": "youtube_short",
+                            "name": "YouTube Short",
+                            "subtitle": "24-48 hrs \u00e2\u20ac\u00a2 Vertical 9:16",
+                            "description": "Engaging storytelling cuts, eye-catching text overlays, and sound design tuned for shorts.",
+                            "icon_key": "play_arrow",
+                            "default_base_price": "1299.00",
+                            "default_turnaround_hours": 36,
+                            "free_revisions_limit": 2,
+                            "extra_revision_price": "299.00",
+                            "is_active": 1,
+                            "sort_order": 0,
+                            "created_at": "2026-11-20 10:11:49",
+                            "updated_at": "2026-11-20 10:11:49"
+                        },
+                        {
+                            "id": 4,
+                            "slug": "youtube_long",
+                            "name": "YouTube Long",
+                            "subtitle": "2-4 days \u00e2\u20ac\u00a2 8-15 mins",
+                            "description": "Comprehensive pacing, multi-cam sync, B-roll insertions, motion graphics, and audio mastering.",
+                            "icon_key": "smart_display",
+                            "default_base_price": "2999.00",
+                            "default_turnaround_hours": 72,
+                            "free_revisions_limit": 2,
+                            "extra_revision_price": "499.00",
+                            "is_active": 1,
+                            "sort_order": 0,
+                            "created_at": "2026-11-20 10:11:49",
+                            "updated_at": "2026-11-20 10:11:49"
+                        }
+                    ],
+                    "addons": [
+                        {
+                            "id": 1,
+                            "slug": "rush_delivery",
+                            "name": "Rush Delivery",
+                            "description": "Prioritize your project for turnaround in under 24 hours.",
+                            "price": "500.00",
+                            "turnaround_reduction_hours": 24,
+                            "is_active": 1,
+                            "created_at": "2026-11-20 10:11:49"
+                        },
+                        {
+                            "id": 2,
+                            "slug": "extra_revision",
+                            "name": "Extra Revision",
+                            "description": "Additional complete revision cycle after free revisions are used.",
+                            "price": "299.00",
+                            "turnaround_reduction_hours": 0,
+                            "is_active": 1,
+                            "created_at": "2026-11-20 10:11:49"
+                        },
+                        {
+                            "id": 3,
+                            "slug": "animated_captions",
+                            "name": "Animated Captions & Subtitles",
+                            "description": "Word-by-word karaoke style animated subtitles in matching brand colors.",
+                            "price": "399.00",
+                            "turnaround_reduction_hours": 0,
+                            "is_active": 1,
+                            "created_at": "2026-11-20 10:11:49"
+                        },
+                        {
+                            "id": 4,
+                            "slug": "source_files",
+                            "name": "Raw Project / Source Files",
+                            "description": "Receive organized Adobe Premiere Pro (.prproj) or DaVinci Resolve project files.",
+                            "price": "799.00",
+                            "turnaround_reduction_hours": 0,
+                            "is_active": 1,
+                            "created_at": "2026-11-20 10:11:49"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Server Price Quote Calculation",
+            "method": "POST",
+            "path": "/api/v1/bookings/quote",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "base_amount": 1499,
+                    "addons_amount": 500,
+                    "platform_fee": 0,
+                    "discount_amount": 100,
+                    "tax_amount": 0,
+                    "total_amount": 1899,
+                    "currency": "INR"
+                }
+            }
+        },
+        {
+            "name": "Create Booking Wizard Step 4 (M04)",
+            "method": "POST",
+            "path": "/api/v1/bookings",
+            "status": 201,
+            "expected": 201,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "booking_id": 3,
+                    "order_code": "#QE5485",
+                    "total_amount": 2499,
+                    "status": "pending_payment",
+                    "message": "Booking created successfully. Proceed to payment."
+                }
+            }
+        },
+        {
+            "name": "List Active Bookings",
+            "method": "GET",
+            "path": "/api/v1/bookings",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "bookings": [
+                        {
+                            "id": 3,
+                            "order_code": "#QE5485",
+                            "status": "pending_payment",
+                            "base_amount": "1999.00",
+                            "total_amount": "2499.00",
+                            "deadline_at": "2026-11-22 05:43:52",
+                            "service_name": "Insta Reel",
+                            "client_name": "Maya Patel",
+                            "editor_name": "Rohan Mehta"
+                        },
+                        {
+                            "id": 2,
+                            "order_code": "#QE2458",
+                            "status": "first_preview",
+                            "base_amount": "3499.00",
+                            "total_amount": "3999.00",
+                            "deadline_at": "2026-11-22 10:12:15",
+                            "service_name": "YouTube Long",
+                            "client_name": "Kabir Singhania",
+                            "editor_name": "Rohan Mehta"
+                        },
+                        {
+                            "id": 1,
+                            "order_code": "#QE2457",
+                            "status": "editing",
+                            "base_amount": "1999.00",
+                            "total_amount": "2499.00",
+                            "deadline_at": "2026-11-20 15:12:15",
+                            "service_name": "Insta Reel",
+                            "client_name": "Maya Patel",
+                            "editor_name": "Rohan Mehta"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Order Tracking Details (M06)",
+            "method": "GET",
+            "path": "/api/v1/bookings/detail?id=1",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "id": 1,
+                    "order_code": "#QE2457",
+                    "client_id": 1,
+                    "editor_id": 3,
+                    "service_id": 2,
+                    "status": "editing",
+                    "base_amount": "1999.00",
+                    "addons_amount": "500.00",
+                    "platform_fee": "0.00",
+                    "discount_amount": "0.00",
+                    "tax_amount": "0.00",
+                    "total_amount": "2499.00",
+                    "revisions_used": 0,
+                    "free_revisions_limit": 2,
+                    "brief": null,
+                    "editing_instructions": null,
+                    "deadline_at": "2026-11-20 15:12:15",
+                    "review_deadline_at": null,
+                    "completed_at": null,
+                    "created_at": "2026-11-20 10:12:15",
+                    "updated_at": "2026-11-20 10:12:15",
+                    "service_name": "Insta Reel",
+                    "client_name": "Maya Patel",
+                    "editor_name": "Rohan Mehta"
+                }
+            }
+        },
+        {
+            "name": "Direct-to-R2 Presigned PUT Generator",
+            "method": "POST",
+            "path": "/api/v1/uploads/presign",
+            "status": 201,
+            "expected": 201,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "media_id": 5,
+                    "object_key": "uploads/20261120/media_6affd0089baab0.72568120_raw_broll_clip.mov",
+                    "mode": "multipart",
+                    "presigned_put_url": "https://r2.quickedit.com/uploads/20261120/media_6affd0089baab0.72568120_raw_broll_clip.mov?X-Amz-Signature=mock_sig_v4_token",
+                    "expires_in": 900
+                }
+            }
+        },
+        {
+            "name": "Finalize & Verify Upload",
+            "method": "POST",
+            "path": "/api/v1/uploads/complete",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "media_id": 1,
+                    "status": "uploaded",
+                    "message": "Upload verified and stored in R2 bucket."
+                }
+            }
+        },
+        {
+            "name": "Razorpay Server Order Creation (M05)",
+            "method": "POST",
+            "path": "/api/v1/payments/razorpay/order",
+            "status": 201,
+            "expected": 201,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "razorpay_order_id": "order_1f582edb84214c",
+                    "amount_paise": 249900,
+                    "currency": "INR",
+                    "key_id": "rzp_test_quickedit_dummy_key"
+                }
+            }
+        },
+        {
+            "name": "Razorpay Verification & Ledger Locking (M05)",
+            "method": "POST",
+            "path": "/api/v1/payments/razorpay/verify",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "status": "payment_captured",
+                    "booking_status": "booked",
+                    "editor_pending_credit": 2124.15,
+                    "message": "Payment verified successfully."
+                }
+            }
+        },
+        {
+            "name": "Authoritative Webhook Ingestion",
+            "method": "POST",
+            "path": "/api/v1/webhooks/razorpay",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "status": "webhook_processed",
+                    "event_id": "evt_qa_test_2859"
+                }
+            }
+        },
+        {
+            "name": "Editor Dashboard & Live Metrics (M07)",
+            "method": "GET",
+            "path": "/api/v1/editor/dashboard?editor_id=3",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "available_balance": 18450,
+                    "pending_balance": 9324.15,
+                    "active_projects_count": 1,
+                    "rating": 4.9,
+                    "upcoming_deadlines": [
+                        {
+                            "id": 2,
+                            "order_code": "#QE2458",
+                            "service_id": 4,
+                            "deadline_at": "2026-11-22 10:12:15",
+                            "status": "first_preview"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Editor Incoming Job Requests (M08)",
+            "method": "GET",
+            "path": "/api/v1/editor/job-requests",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "job_requests": [
+                        {
+                            "id": 1,
+                            "order_code": "#QE2457",
+                            "total_amount": "2499.00",
+                            "brief": null,
+                            "deadline_at": "2026-11-20 15:12:15",
+                            "service_name": "Insta Reel",
+                            "client_name": "Maya Patel",
+                            "client_avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Atomic Job Acceptance with Row Lock (M08)",
+            "method": "POST",
+            "path": "/api/v1/editor/job-requests/accept",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "status": "accepted",
+                    "message": "Job accepted atomically! Workspace is ready."
+                }
+            }
+        },
+        {
+            "name": "Project Workspace Files & Checklist (M09)",
+            "method": "GET",
+            "path": "/api/v1/projects/workspace?booking_id=1",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "booking": {
+                        "id": 1,
+                        "order_code": "#QE2457",
+                        "client_id": 1,
+                        "editor_id": 3,
+                        "service_id": 2,
+                        "status": "accepted",
+                        "base_amount": "1999.00",
+                        "addons_amount": "500.00",
+                        "platform_fee": "0.00",
+                        "discount_amount": "0.00",
+                        "tax_amount": "0.00",
+                        "total_amount": "2499.00",
+                        "revisions_used": 0,
+                        "free_revisions_limit": 2,
+                        "brief": null,
+                        "editing_instructions": null,
+                        "deadline_at": "2026-11-20 15:12:15",
+                        "review_deadline_at": null,
+                        "completed_at": null,
+                        "created_at": "2026-11-20 10:12:15",
+                        "updated_at": "2026-11-20 10:13:52",
+                        "client_name": "Maya Patel",
+                        "client_avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+                    },
+                    "files": [
+                        {
+                            "id": 1,
+                            "original_filename": "raw_footage.mov",
+                            "size_bytes": 1395864371,
+                            "mime_type": "video/quicktime"
+                        },
+                        {
+                            "id": 2,
+                            "original_filename": "brand_kit.zip",
+                            "size_bytes": 262144000,
+                            "mime_type": "application/zip"
+                        },
+                        {
+                            "id": 3,
+                            "original_filename": "music.mp3",
+                            "size_bytes": 12582912,
+                            "mime_type": "audio/mpeg"
+                        },
+                        {
+                            "id": 5,
+                            "original_filename": "raw_broll_clip.mov",
+                            "size_bytes": 450000000,
+                            "mime_type": "video/quicktime"
+                        }
+                    ],
+                    "checklist": [
+                        {
+                            "title": "Review raw assets and brief",
+                            "is_completed": true
+                        },
+                        {
+                            "title": "Sync audio & cut rough draft",
+                            "is_completed": true
+                        },
+                        {
+                            "title": "Animated captions & B-roll pacing",
+                            "is_completed": false
+                        },
+                        {
+                            "title": "Final 1080p Export",
+                            "is_completed": false
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Order Delivery Approval & Ledger Balance Release (M06)",
+            "method": "POST",
+            "path": "/api/v1/orders/approve",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "status": "completed",
+                    "editor_available_credited": 2124.15,
+                    "message": "Order delivery approved! Editor funds released to withdrawable balance."
+                }
+            }
+        },
+        {
+            "name": "Editor Earnings & Transaction History (M11)",
+            "method": "GET",
+            "path": "/api/v1/editor/earnings?editor_id=3",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "available_balance": 20574.15,
+                    "pending_balance": 9324.15,
+                    "lifetime_earnings": 284500,
+                    "transactions": [
+                        {
+                            "id": 3,
+                            "entry_type": "pending_credit",
+                            "amount": "2124.15",
+                            "description": "Order payment captured. Net earnings pending clearance.",
+                            "created_at": "2026-11-20 10:13:52"
+                        },
+                        {
+                            "id": 4,
+                            "entry_type": "available_credit",
+                            "amount": "2124.15",
+                            "description": "Client approved order delivery. Withdrawable balance unlocked.",
+                            "created_at": "2026-11-20 10:13:52"
+                        },
+                        {
+                            "id": 1,
+                            "entry_type": "available_credit",
+                            "amount": "18450.00",
+                            "description": "Available Balance (November 2026 Earnings)",
+                            "created_at": "2026-11-20 10:12:15"
+                        },
+                        {
+                            "id": 2,
+                            "entry_type": "pending_credit",
+                            "amount": "7200.00",
+                            "description": "Pending Clearance Balance",
+                            "created_at": "2026-11-20 10:12:15"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Editor Withdrawal Request & Balance Hold (M11)",
+            "method": "POST",
+            "path": "/api/v1/editor/withdrawals",
+            "status": 201,
+            "expected": 201,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "withdrawal_id": 1,
+                    "status": "pending_approval",
+                    "message": "Withdrawal request submitted. Admin will process and supply UTR."
+                }
+            }
+        },
+        {
+            "name": "Admin Executive Analytics Overview (M13)",
+            "method": "GET",
+            "path": "/api/v1/admin/analytics/overview",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "gmv": 8997,
+                    "platform_net_revenue": 1349.55,
+                    "active_orders_count": 1,
+                    "pending_kyc_count": 0,
+                    "pending_withdrawals_count": 1
+                }
+            }
+        },
+        {
+            "name": "Admin Immutable Audit Logs (M13)",
+            "method": "GET",
+            "path": "/api/v1/admin/audit-logs",
+            "status": 200,
+            "expected": 200,
+            "passed": true,
+            "details": "OK",
+            "response_sample": {
+                "success": true,
+                "data": {
+                    "audit_logs": []
+                }
+            }
+        }
+    ]
+}
